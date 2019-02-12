@@ -1,0 +1,27 @@
+12 February 2019
+
+
+The following is the Build-Run Document for the CS3670 Term Project from Brody Hill, Chris McKeon, and Sam Scott.
+
+
+As of the writing of this document, this term project has the following technical specifications:
+
+
+Programming Software: Java SE Development Kit 11.0.2
+
+Programming Integrated Development Environment (IDE): Eclipse Java 2018-12
+
+Programming Operating Systems: Microsoft Windows 10 Home, Vers. 1709, 1803
+
+Programing Hardware: Lenovo ideapad 330s, AMD Radeon Vega 8 Mobile Graphics, AMD Ryzen 5 2500U
+
+
+Java SE Development Kit 11.0.2 Installation:
+
+Visit this link for step-by-step installation of Java JDK installation: 
+https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A
+
+
+Eclipse 2018-12 Installation:
+Visit this link for step-by-step installation of Eclipse 2018-12:
+https://www.eclipse.org/downloads/packages/installer
