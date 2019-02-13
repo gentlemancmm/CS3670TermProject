@@ -11,17 +11,19 @@ Programming Software: Java SE Development Kit 11.0.2
 
 Programming Integrated Development Environment (IDE): Eclipse Java 2018-12
 
-Programming Operating Systems: Microsoft Windows 10 Home, Vers. 1709, 1803
+Programming Operating Systems: Microsoft Windows 10, Version 1709 or later
 
 Programing Hardware: Lenovo ideapad 330s, AMD Radeon Vega 8 Mobile Graphics, AMD Ryzen 5 2500U, HP Envy 17T-K300
 
 
-Java SE Development Kit 11.0.2 Installation:
 
-Visit this link for step-by-step installation of Java JDK installation: 
-https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A
+Instructions for running this code:
+  1. Install Java JDK version 11.0.2
+    https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A
+  2. Download the Java binary from the Production Branch
+  3. Using Powershell, run the file using command 'java'. No extra parameters are necessary (yet).
 
 
-Eclipse 2018-12 Installation:
-Visit this link for step-by-step installation of Eclipse 2018-12:
-https://www.eclipse.org/downloads/packages/installer
+
+
+Code for this project was written largely in Eclipse. For product information visit www.eclipse.org
