@@ -1,0 +1,12 @@
+Protocol Specifications for BattleZone network project
+
+Required Messages
+1. Movement + direction
+2. Shooting
+3. Death
+4. Respawn
+
+
+Message Contents
+1. Movement + direction:
+  a.
