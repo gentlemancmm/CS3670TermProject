@@ -1,12 +1,36 @@
 Protocol Specifications for BattleZone network project
 
-Required Messages
+Client Messages
 1. Movement + direction
+  a. JSON object of self + new coordinates
+  b. Mouse + wasd movement.
+  c. sent every 0.1 seconds of motion
+  d. must be at least as fast as server updates so enemies don't spend two 'turns' in the same spot. would look jittery
 2. Shooting
-3. Death
-4. Respawn
+  a. use undrawn line object for trajectory (ignore z factor)
+  b. does client calculate? probably
+  c. 
+3. New Game
+  a. server only listens during 'game end'
+  b. structured message 'next'
+  c. map selection?
+4. Quit Game
+  a. structured disconnect 'disconnect'
 
-
-Message Contents
-1. Movement + direction:
-  a.
+Server Messages
+1. You Died
+  a. structured text 'dead'
+2. Respawn
+  a. send new coordinates
+3. Enemy location updates
+  a. Use Json Objects
+  b. send coordinates or 'd' for dead
+  c. updates sent every 0.1 seconds (adjustable)
+4. Scored a kill (Optional)
+  a. JSON object of enemy killed.
+  b. keyword to trigger explosion animation
+  c. increment user score
+  d. MAY NOT APPEAR IN FINAL VERSION
+4. Send map file
+  a. serialize a txt? file.
+  b. each client builds own version of map
