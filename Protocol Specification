@@ -2,35 +2,30 @@ Protocol Specifications for BattleZone network project
 
 Client Messages
 1. Movement + direction
-  a. JSON object of self + new coordinates
-  b. Mouse + wasd movement.
-  c. sent every 0.1 seconds of motion
-  d. must be at least as fast as server updates so enemies don't spend two 'turns' in the same spot. would look jittery
+  a. {“command”:“update”,”tankName”:”myTank”,”xPos”:”1”,”yPos”:”2”,”direction”:”north”,”shotBullet”:”yes”}
 2. Shooting
-  a. use undrawn line object for trajectory (ignore z factor)
-  b. does client calculate? probably
-  c. 
+  a. Not own command
+  b. Covered in the Update Command above
 3. New Game
-  a. server only listens during 'game end'
-  b. structured message 'next'
-  c. map selection?
+  a. {"command":"newgame",}
 4. Quit Game
-  a. structured disconnect 'disconnect'
+  a. {“command”:“disconnect”,”tankName”:”myTank”}
 
 Server Messages
 1. You Died
   a. structured text 'dead'
 2. Respawn
   a. send new coordinates
-3. Enemy location updates
-  a. Use Json Objects
-  b. send coordinates or 'd' for dead
-  c. updates sent every 0.1 seconds (adjustable)
-4. Scored a kill (Optional)
+3. Master Update
+  a. tankName, xPos, yPos, directionFace, status
+  b. each tank: {"command":"update","tankName":"myTank","xPos":"1","yPos":"1","direction":"north","status":"dead"}
+  c. bullets with X an Y pos and standard delta
+  d. {“command”:“masterupdate”,”tanks”: {{“tankName”:”myTank”,”xPos”:”1”,”yPos”:”2”,”directionFace”:”south”}}, “bullets”:{{“xPos”:”3”,”yPos”:”3”}, {“xPos”:”5”,”yPos”:”4”}}}
+  e. updates sent every 0.1 seconds (adjustable)
+5. Scored a kill (Optional)
   a. JSON object of enemy killed.
   b. keyword to trigger explosion animation
   c. increment user score
   d. MAY NOT APPEAR IN FINAL VERSION
-4. Send map file
-  a. serialize a txt? file.
-  b. each client builds own version of map
+6. Send Map file
+  a. No map will be sent. Each client responsible for owning the map.
