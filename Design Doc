@@ -7,21 +7,21 @@ Protocol Spec
 - UDP
 - Commands
 - Client
-  o	Add tank
-    	add, tankName
-    	{“command”:“add”,”tankName”:”myTank”}
-  o	Update
-    	update, tankName, xPos, yPos, direction, shotBullet
-    	{“command”:“update”,”tankName”:”myTank”,”xPos”:”1”,”yPos”:”2”,”direction”:”north”,”shotBullet”:”yes”}
-    	If shot bullet, create bullet at tank’s location and in tank’s direction
-  o	Disconnect
-    	disconnect, tankName
-    	{“command”:“disconnect”,”tankName”:”myTank”}
+  o Add tank
+     add, tankName
+     {“command”:“add”,”tankName”:”myTank”}
+  o Update
+     update, tankName, xPos, yPos, direction, shotBullet
+     {“command”:“update”,”tankName”:”myTank”,”xPos”:”1”,”yPos”:”2”,”direction”:”north”,”shotBullet”:”yes”}
+     If shot bullet, create bullet at tank’s location and in tank’s direction
+  o Disconnect
+     disconnect, tankName
+     {“command”:“disconnect”,”tankName”:”myTank”}
 - Server
-  o	Master Update – sends out at set intervalUpdate
-    	List of Tanks
-      •	tankName, xPos, yPos, directionFace
-    	List of Bullets
-      •	xPos, yPos 
-    	{“command”:“masterupdate”,”tanks”: {{“tankName”:”myTank”,”xPos”:”1”,”yPos”:”2”,”directionFace”:”south”}}, “bullets”:{{“xPos”:”3”,”yPos”:”3”}, {“xPos”:”5”,”yPos”:”4”}}}
+  o Master Update – sends out at set intervalUpdate
+     List of Tanks
+      • tankName, xPos, yPos, directionFace
+     List of Bullets
+      • xPos, yPos 
+     {“command”:“masterupdate”,”tanks”: {{“tankName”:”myTank”,”xPos”:”1”,”yPos”:”2”,”directionFace”:”south”}}, “bullets”:{{“xPos”:”3”,”yPos”:”3”}, {“xPos”:”5”,”yPos”:”4”}}}
 
