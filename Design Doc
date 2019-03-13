@@ -4,21 +4,20 @@ Functionality
 - Use Animation Timers for GUI
 Protocol Spec
 - All messages in JSON
-- UDP
-- Commands
-- Client
+- UDP messages
+- Client Commands
   o Add tank
      add, tankName
      {“command”:“add”,”tankName”:”myTank”}
-  o Update
+  o Update - sent out at set interval
      update, tankName, xPos, yPos, direction, shotBullet
      {“command”:“update”,”tankName”:”myTank”,”xPos”:”1”,”yPos”:”2”,”direction”:”north”,”shotBullet”:”yes”}
      If shot bullet, create bullet at tank’s location and in tank’s direction
   o Disconnect
      disconnect, tankName
      {“command”:“disconnect”,”tankName”:”myTank”}
-- Server
-  o Master Update – sends out at set intervalUpdate
+- Server Commands
+  o Master Update – sent out at set interval
      List of Tanks
       • tankName, xPos, yPos, directionFace
      List of Bullets
