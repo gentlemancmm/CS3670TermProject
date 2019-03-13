@@ -1,12 +1,12 @@
 Functionality
--	Master game state stored on server
--	Hard-coded map on all clients/server
--	Use Animation Timers for GUI
+- Master game state stored on server
+- Hard-coded map on all clients/server
+- Use Animation Timers for GUI
 Protocol Spec
--	All messages in JSON
--	UDP
--	Commands
--	Client
+- All messages in JSON
+- UDP
+- Commands
+- Client
   o	Add tank
     	add, tankName
     	{“command”:“add”,”tankName”:”myTank”}
@@ -17,7 +17,7 @@ Protocol Spec
   o	Disconnect
     	disconnect, tankName
     	{“command”:“disconnect”,”tankName”:”myTank”}
--	Server
+- Server
   o	Master Update – sends out at set intervalUpdate
     	List of Tanks
       •	tankName, xPos, yPos, directionFace
